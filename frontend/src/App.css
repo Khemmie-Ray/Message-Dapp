@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(navy, rgb(0, 0, 0));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  background-color: rgba(255, 255, 255, 0.636);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+input, button {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  margin: 1em 0;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+}
+
+button {
+  background-color: aqua;
+}
+
+.pop-up {
+  position: absolute;
+  top: 10px;
+  padding: 1em;
+  background-color: #111111c9;
+  color: white;
+}
