@@ -2,7 +2,8 @@
 
 A short class project at Web3Bridge with the following features:
 
--  A smart contract 
+-  A smart contract with a set and get message function.
+- A frontend interface interacting with the smart contract.
 
 ### Technologies
 

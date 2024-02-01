@@ -25,7 +25,12 @@ function App() {
     try {
       const transaction = await myMessageContract.setMessage(newMessage);
       await transaction.wait();
+
       setPopMessage(true)
+      setInputMessage("")
+      setTimeout(() => {
+        setPopMessage(false)
+      }, 2000) 
       console.log('Message set successfully');
     } catch (error) {
       console.error('Error setting message:', error);
@@ -45,7 +50,7 @@ function App() {
       const message = await myMessageContract.getMessage();
       // await transaction.wait();
       setRetrievedMessage(message);
-      console.log('Message set successfully');
+      console.log('Message retrieved successfully');
     } catch (error) {
       console.error('Error setting message:', error);
     }
@@ -55,7 +60,7 @@ function App() {
   return (
     <div className="App">
      <h1>Message Retrieval DApp</h1>
-     <p>Send a messsage</p>
+     <div className='container'>
      <div>
      <input 
      type='text' 
@@ -68,12 +73,13 @@ function App() {
      </div>
      <div>
       <button onClick={getMessage}>Get Message</button>
-      <p>Retrieved Message: {retrievedMessage}</p>
      </div>
-    {popMessage && ( <div className='pop-up'>
+     </div>
+     {popMessage && ( <div className='pop-up'>
       <p>Message has been set successfully</p>
      </div>
      )}
+     <p className='message'>Retrieved Message: <span><em> {retrievedMessage}</em> </span></p>
     </div>
   );
 }

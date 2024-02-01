@@ -10,12 +10,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.App {
-  background-color: rgba(255, 255, 255, 0.636);
-  padding: 1em;
+h1, .message {
+  color: white;
+}
+
+.message {
+  font-size: 1.2rem;
+}
+
+span {
+  color: magenta;
+  font-weight: 900;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.46);
+  padding: 1em 2rem;
+  color: #111;
+  text-shadow: black;
   border-radius: 10px;
+  backdrop-filter: blur(5px);
 }
 
 input, button {
@@ -29,13 +46,23 @@ input, button {
 }
 
 button {
-  background-color: aqua;
+  background-color: rgb(1, 1, 111);
+  color: white;
+  font-weight: 900;
+}
+
+button:hover,
+button:focus {
+  background-color: #4a4949e0;
+  color: white;
 }
 
 .pop-up {
   position: absolute;
   top: 10px;
-  padding: 1em;
-  background-color: #111111c9;
-  color: white;
+  padding: .5em 2em;
+  background-color: #ffffffc9;
+  color: navy;
+  font-weight: 900;
+  border-radius: 15px;
 }
